@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        //print a number which is greater than 3 and store in to another array
+        var a=[1,2,3,4,5,6];
+        var b=[];
+        for(i=0;i<a.length;i++)
+        {
+            if(a[i]>3)
+            {
+                b.push(a[i]);
+            }
+        }
+        console.log(b);
+
+        //print the values in array the values should be grater than 1
+        var b=[1,2,1,4,6,5]
+        var c=[]
+        for(i=0;i<b.length;i++)
+        {
+            if(b[i]>1)
+            {
+                c.push(b[i]);
+                console.log("true");
+                
+            }
+            else
+            {
+                console.log("false");
+            }
+        }
+        console.log("values that are grater than 1 in given array:");
+        console.log(c);
+
+        //convert array elements to string
+        var d=[1,2,3,4,5,6]
+        var e=""
+        // console.log(d.join(""));
+        for(i=0;i<d.length;i++)
+        {
+            e=e+d[i]+" ";
+        }
+        console.log(e);
+
+        //convert this array into 
+        // inp : var a = ["hello","kumar","raju"]
+        // o/p:[[eo,hell],[ua,kmr],[au,rj]]
+        var str=["hello","kumar","raju"]
+        var temp=[];
+        for(i=0;i<str.length;i++)
+        {
+            vowels="";
+            consonants="";
+            for(j=0;j<str[i].length;j++)
+            {
+                if(str[i][j]=='a' || str[i][j]=='e'|| str[i][j]=='i' || str[i][j]=='o'||str[i][j]=='u')
+                {
+                    vowels=vowels+str[i][j];
+                }
+                else
+                {
+                    consonants=consonants+str[i][j];
+                }
+            }
+            temp.push([vowels,consonants]);
+        }
+        console.log(temp);
+
+        /*write a js program to covert this array with out using any methods
+        input : a=[1,[2,4,5],[3,[4,6,7]],4];
+        output : a=[1,2,4,5,3,4,6,7,4]*/
+
+        var a=[1,[2,4,5],[3,[4,6,7,8]],4]
+        var b=[];
+        for(i=0;i<a.length;i++)
+        {
+            if(typeof(a[i])=="number")
+            {
+                b.push(a[i])
+            }
+            else
+            {
+                for(j=0;j<a[i].length;j++)
+                {
+                    if(typeof(a[i][j])=="number")
+                    {
+                        b.push(a[i][j])
+                    }
+                    else
+                    {
+                        for(p=0;p<a[i][j].length;p++)
+                        {
+                            if(typeof(a[i][j][p])=="number")
+                            {
+                                b.push(a[i][j][p])
+                            }
+                           
+                        }
+                    }
+                }
+            }
+        }
+        console.log(b);
+    
+     
+
+        
+
+       
+        
+
+        
+       
+
+    </script>
+</body>
+</html>
